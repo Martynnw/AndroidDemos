@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout1"
+    android:padding="4dp">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/imgRoleIcon"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp" />
+    <TextView
+        android:text="txtName"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtName" />
+    <TextView
+        android:text="txtTeam"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:id="@+id/txtTeam"
+        android:layout_alignLeft="@+id/txtName" />
+</RelativeLayout>
