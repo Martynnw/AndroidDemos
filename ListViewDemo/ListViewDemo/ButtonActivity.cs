@@ -23,6 +23,15 @@ namespace ListViewDemo
             this.ListAdapter = new ButtonAdapter(this, players);
         }
 
+        protected override void OnListItemClick(ListView l, View v, int position, long id)
+        {
+            base.OnListItemClick(l, v, position, id);
+
+            Player player = ((ButtonAdapter)this.ListAdapter)[position];
+            string text = string.Format("{0} Item Click!", player.Name);
+            Toast.MakeText(this, text, ToastLength.Short).Show();
+        }
+
         private class ButtonAdapter : BaseAdapter<Player>
         {
             private Activity activity;
@@ -89,7 +98,7 @@ namespace ListViewDemo
                 public void OnClick(View v)
                 {
                     string name = (string)v.Tag;
-                    string text = string.Format("{0} Pressed.", name);
+                    string text = string.Format("{0} Button Click.", name);
                     Toast.MakeText(this.activity, text, ToastLength.Short).Show();
                 }
             }
