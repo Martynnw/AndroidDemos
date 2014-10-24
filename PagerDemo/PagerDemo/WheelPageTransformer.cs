@@ -20,44 +20,26 @@ namespace PagerDemo
         private const float MinAlpha = 0.5F;
         private const float MaxAngle = 30;
 
-        public void TransformPage(View page, float position)
+        public void TransformPage(View view, float position)
         {
-            int pageWidth = page.Width;
-            int pageHeight = page.Height;
-
-            if (position < -1)
+            if (position < -1 || position > 1)
             {
-                page.Alpha = 0; // Off screen to the left.
-            }
-            else if (position <= 1)
-            {/*
-                float scaleFactor = Math.Max(MinScale, 1 - Math.Abs(position));
-                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
-                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
-
-                if (position < 0)
-                {
-                    page.TranslationX = horzMargin - vertMargin / 2;
-                }
-                else
-                {
-                    page.TranslationY = -horzMargin + vertMargin / 2;
-                }
-
-                page.ScaleX = scaleFactor;
-                page.ScaleY = scaleFactor;
-
-                page.Alpha = MinAlpha + (scaleFactor - MinScale) / (1 - MinScale) * (1 - MinAlpha);
-
-                */
-                page.PivotY = page.Height;
-
-                float angle = position * MaxAngle;
-                page.Rotation = angle;
+                view.Alpha = 0;
             }
             else
             {
-                page.Alpha = 0; // Off screen to the right.
+                view.PivotY = view.Height / 2;
+
+                if (position < 0)
+                {
+                    view.PivotX = view.Width;
+                }
+                else
+                {
+                    view.PivotX = 0;
+                }
+
+                view.RotationY = 20F * position;
             }
         }
     }

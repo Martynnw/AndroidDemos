@@ -60,7 +60,7 @@
     <Compile Include="PagerFragment.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScreenSlidePagerAdapter.cs" />
+    <Compile Include="DemoPagerAdapter.cs" />
     <Compile Include="WheelPageTransformer.cs" />
   </ItemGroup>
   <ItemGroup>

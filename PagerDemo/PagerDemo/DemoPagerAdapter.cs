@@ -12,11 +12,11 @@ using Android.Widget;
 
 namespace PagerDemo
 {
-    internal class ScreenSlidePagerAdapter : Android.Support.V13.App.FragmentStatePagerAdapter
+    internal class DemoPagerAdapter : Android.Support.V13.App.FragmentStatePagerAdapter
     {
         private const int PageCount = 5;
 
-        public ScreenSlidePagerAdapter(FragmentManager fm) : base(fm)
+        public DemoPagerAdapter(FragmentManager fm) : base(fm)
         {
         }
 

@@ -22,7 +22,7 @@ namespace PagerDemo
 
             this.SetContentView(Resource.Layout.Main);
             
-            pagerAdapter = new ScreenSlidePagerAdapter(this.FragmentManager);
+            pagerAdapter = new DemoPagerAdapter(this.FragmentManager);
 
             viewPager = this.FindViewById<ViewPager>(Resource.Id.pager);
             viewPager.SetPageTransformer(true, new WheelPageTransformer());
