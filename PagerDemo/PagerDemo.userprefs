@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PagerDemo/ScaleTransformer.cs">
+    <Files>
+      <File FileName="PagerDemo/Pagers.sketchcs" Line="1" Column="1" />
+      <File FileName="PagerDemo/PagerActivity.cs" Line="9" Column="9" />
+      <File FileName="PagerDemo/MainActivity.cs" Line="31" Column="31" />
+      <File FileName="PagerDemo/FadeTransformer.cs" Line="73" Column="73" />
+      <File FileName="PagerDemo/ScaleTransformer.cs" Line="20" Column="20" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PagerDemo MonoForAntroid.PreferredDevice="Nexus 4" />
+</Properties>

@@ -16,20 +16,21 @@ namespace PagerDemo
 {
     internal class WheelPageTransformer : Java.Lang.Object, ViewPager.IPageTransformer
     {
-        private const float MinScale = 0.85F;
-        private const float MinAlpha = 0.5F;
-        private const float MaxAngle = 30;
+        private const float MaxAngle = 30F;
 
         public void TransformPage(View view, float position)
         {
-            if (position < -1 || position > 1)
+			if (position < -1 || position > 1) 
+			{
+				view.Alpha = 0; // The view is offscreen.
+			} 
+			else 
             {
-                view.Alpha = 0;
-            }
-            else
-            {
-                view.PivotY = view.Height / 2;
+				view.Alpha = 1; 
 
+				view.PivotY = view.Height / 2; // The Y Pivot is halfway down the view.
+
+				// The X pivots need to be on adjacent sides.
                 if (position < 0)
                 {
                     view.PivotX = view.Width;
@@ -39,7 +40,9 @@ namespace PagerDemo
                     view.PivotX = 0;
                 }
 
-                view.RotationY = 20F * position;
+                view.RotationY = MaxAngle * position; // Rotate the view.
+
+				view.FindViewById<TextView> (Resource.Id.textView1).Text = string.Format ("Position: {0}\r\nPivotX: {1}\r\nRotationY {2}", position, view.PivotX, view.RotationY);
             }
         }
     }
