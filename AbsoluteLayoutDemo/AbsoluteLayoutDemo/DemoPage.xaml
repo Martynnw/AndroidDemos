@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AbsoluteLayoutDemo.DemoPage">
+	<ContentPage.Content BindingContext="AbsoluteLayoutDemo.DemoPageViewModel">
+		<StackLayout Orientation="Vertical"
+					 	HorizontalOptions="Fill"
+						BackgroundColor="#2B4970"
+						VerticalOptions="Fill"
+						Padding="10"
+						Spacing="10">
+			<AbsoluteLayout HorizontalOptions="Fill"
+							VerticalOptions="FillAndExpand"
+							BackgroundColor="#4C688B">
+				<BoxView Color="#051B38" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.5, 0.5" x:Name="BoundsBox"/>
+			</AbsoluteLayout>
+			<Grid BackgroundColor="#4C688B" Padding="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				
+				<Label Text="X" Grid.Row="0" Grid.Column="0"/>
+				<Slider Minimum="{Binding XMin}" Maximum="{Binding XMax}" Value="{Binding X}" Grid.Row="0" Grid.Column="1" />
+				<Label Text="{Binding X, StringFormat='{0:F2}'}" Grid.Row="0" Grid.Column="2"/>
+				
+				<Label Text="Y" Grid.Row="1" Grid.Column="0"/>
+				<Slider Minimum="{Binding YMin}" Maximum="{Binding YMax}" Value="{Binding Y}" Grid.Row="1" Grid.Column="1" />
+				<Label Text="{Binding Y, StringFormat='{0:F2}'}" Grid.Row="1" Grid.Column="2"/>
+				
+				<Label Text="Width" Grid.Row="2" Grid.Column="0"/>
+				<Slider Minimum="{Binding WidthMin}" Maximum="{Binding WidthMax}" Value="{Binding Width}" Grid.Row="2" Grid.Column="1" />				
+				<Label Text="{Binding Width, StringFormat='{0:F2}'}" Grid.Row="2" Grid.Column="2"/>
+				
+				<Label Text="Height" Grid.Row="3" Grid.Column="0"/>
+				<Slider Minimum="{Binding HeightMin}" Maximum="{Binding HeightMax}" Value="{Binding Height}" Grid.Row="3" Grid.Column="1" />
+				<Label Text="{Binding Height, StringFormat='{0:F2}'}" Grid.Row="3" Grid.Column="2"/>
+			</Grid>
+			<Grid BackgroundColor="#4C688B" Padding="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Label Text="All" Grid.Row="0" Grid.Column="0"/>
+				<Switch IsToggled="{Binding FlagsAll}" Grid.Row="0" Grid.Column="1"/>
+				<Label Text="None" Grid.Row="0" Grid.Column="2"/>
+				<Switch IsToggled="{Binding FlagsNone}" Grid.Row="0" Grid.Column="3"/>
+
+				<Label Text="X Prop." Grid.Row="1" Grid.Column="0"/>
+				<Switch IsToggled="{Binding FlagsXProp}" Grid.Row="1" Grid.Column="1"/>
+				<Label Text="Y Prop." Grid.Row="1" Grid.Column="2"/>
+				<Switch IsToggled="{Binding FlagsYProp}" Grid.Row="1" Grid.Column="3"/>
+
+				<Label Text="Width Prop." Grid.Row="2" Grid.Column="0"/>
+				<Switch IsToggled="{Binding FlagsWidthProp}" Grid.Row="2" Grid.Column="1"/>
+				<Label Text="Height Prop." Grid.Row="2" Grid.Column="2"/>
+				<Switch IsToggled="{Binding FlagsHeighProp}" Grid.Row="2" Grid.Column="3"/>
+
+				<Label Text="Position Prop." Grid.Row="3" Grid.Column="0"/>
+				<Switch IsToggled="{Binding FlagsPositionProp}" Grid.Row="3" Grid.Column="1"/>
+				<Label Text="Size Prop." Grid.Row="3" Grid.Column="2"/>
+				<Switch IsToggled="{Binding FlagsSizeProp}" Grid.Row="3" Grid.Column="3"/>
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
