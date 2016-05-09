@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="iOS/ButtonCustomRenderer.iOS.csproj">
+  <MonoDevelop.Ide.ItemProperties.ButtonCustomRenderer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.59D92334-FE58-4956-8062-2BC3BC612479" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ButtonCustomRenderer/DemoPage.xaml">
+    <Files>
+      <File FileName="ButtonCustomRenderer/CustomButton.cs" Line="6" Column="36" />
+      <File FileName="ButtonCustomRenderer/ButtonCustomRenderer.cs" Line="10" Column="4" />
+      <File FileName="ButtonCustomRenderer/DemoPage.xaml" Line="9" Column="53" />
+      <File FileName="ButtonCustomRenderer/DemoPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Droid/CustomButtonRenderer.cs" Line="16" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ButtonCustomRenderer.Droid PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" />
+</Properties>
