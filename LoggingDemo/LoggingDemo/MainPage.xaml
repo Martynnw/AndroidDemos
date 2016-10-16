@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LoggingDemo.MainPage">
+	<ContentPage.Content>
+		<StackLayout Padding="10, 20, 10, 10">
+			<Button Text="Trace" x:Name="Trace" BackgroundColor="#7FB069" TextColor="#fff" Clicked="Trace_Clicked"/>
+			<Button Text="Debug" x:Name="Debug" BackgroundColor="#9D8DF1" TextColor="#fff" Clicked="Debug_Clicked"/>
+			<Button Text="Info" x:Name="Info" BackgroundColor="#65DEF1" TextColor="#fff" Clicked="Info_Clicked"/>
+			<Button Text="Warn" x:Name="Warn" BackgroundColor="#F3B700" TextColor="#fff" Clicked="Warn_Clicked"/>
+			<Button Text="Error" x:Name="Error" BackgroundColor="#FF6201" TextColor="#fff" Clicked="Error_Clicked"/>
+			<Button Text="Fatal" x:Name="Fatal" BackgroundColor="#F63E02" TextColor="#fff" Clicked="Fatal_Clicked"/>
+			</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
