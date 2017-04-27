@@ -21,27 +21,27 @@ namespace LoggingDemo
 
         private void Debug_Clicked(Object sender, EventArgs args)
         {
-            logger.Trace("Debug Clicked");
+            logger.Debug("Debug Clicked");
         }
 
         private void Info_Clicked(Object sender, EventArgs args)
         {
-            logger.Trace("Info Clicked");
+            logger.Info("Info Clicked");
         }
 
         private void Warn_Clicked(Object sender, EventArgs args)
         {
-            logger.Trace("Warn Clicked");
+            logger.Warn("Warn Clicked");
         }
 
         private void Error_Clicked(Object sender, EventArgs args)
         {
-            logger.Trace("Error Clicked");
+            logger.Error("Error Clicked");
         }
 
         private void Fatal_Clicked(Object sender, EventArgs args)
         {
-            logger.Trace("Fatal Clicked");
+            logger.Fatal("Fatal Clicked");
         }
     }
 }
